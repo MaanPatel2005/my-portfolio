@@ -6,7 +6,7 @@ import ProfilePhoto from "/newpfp.png";
 
 function App() {
   const [count, setCount] = useState(0);
-  // This is the landing page
+  // This is the landing page, going to hop back in and add the other pages tomorrow
   return (
     <>
       <div className="logo-container">
