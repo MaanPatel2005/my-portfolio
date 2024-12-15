@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9f6; /* Light cream background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .accordianMenu {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: -3%;
+    text-align: center;
+    margin-left: 0.5rem;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  
+  .logo-container {
+    margin-top: -8%;
+    padding: 1% 0; /* Reduce padding to make it smaller */
+    display: flex; /* Ensure horizontal alignment */
+    justify-content: left; /* Center align logos */
+    align-items: left; /* Align logos vertically */
+    padding-top: 5%;
+  }
+  
+  .logo {
+    height: 5em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  
+  .logoGithub {
+    height: 5em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  
+  .logoGithub:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .blog-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .photo-frame {
+    width: 400px; /* Adjust the size of the frame */
+    height: 400px;
+    padding: 10px; /* Padding inside the frame */
+    background-color: #000000; /* Background color of the frame */
+    border: 5px solid #817f7f; /* Outer border of the frame */
+    border-radius: 50%; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Add a shadow for a 3D effect */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .profile-photo {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Ensure the photo scales to fit the container */
+    object-fit: cover; /* Crop the image if needed to fill the space */
+    border-radius: 50%; /* Make it circular */
+    border: 15px solid #000000; /* Match the photo's border */
+  }
+  
+  /* Text section (name and description) */
+  .text-section {
+    width: 40%;
+    margin-left: 3rem;
+    text-align: left;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px; /* Space between name and dotted line */
+  }
+  
+  /* Add the dotted line between photo and name */
+  .dotted-line {
+    width: 100%; /* Full width */
+    border-top: 2px dotted #817f7f; /* Dotted line */
+    margin: 10px 0; /* Margin for spacing */
+  }
+  
+  /* Subtitle and other elements */
+  .subtitle {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .description {
+    text-align: left;
+    margin-top: 1rem;
+  }
+  
+  .icons {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #f7d9e6;
+  }
+  
+  .lang-btn {
+    border: none;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .lang-btn.active {
+    background-color: #c7ffb9;
+    color: #333;
+  }
+  
+  footer {
+    background-color: #a7c7e7; /* Baby blue background color */
+    color: #333; /* Dark text for contrast */
+    padding: 1rem 0; /* Padding for top and bottom of the footer */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it spans the entire width */
+    position: fixed; /* Fixed positioning to stay at the bottom */
+    bottom: 0; /* Stick it to the bottom of the viewport */
+    left: 0; /* Align it to the left of the page */
+  }
