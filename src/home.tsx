@@ -1,4 +1,4 @@
-// import { useState } from "react";
+// Import necessary modules and components
 import "./home.css";
 import linkedIn from "/linkedInPhoto.png";
 import Github from "/githubLogo.png";
@@ -13,9 +13,15 @@ import {
   MenuSeparator,
   MenuTrigger,
 } from "./components/ui/menu";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Home() {
-  // This is the landing page, going to hop back in and add the other pages tomorrow
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
+
+  const handleNavigation = (path: string) => {
+    navigate(path); // Navigate to the specified path
+  };
+
   return (
     <>
       <Provider>
@@ -24,18 +30,27 @@ function Home() {
             <MenuRoot>
               <MenuTrigger asChild>
                 <Button variant="outline" size="sm">
-                  Home
+                  Menu
                 </Button>
               </MenuTrigger>
               <MenuContent>
-                <MenuItem value="new-txt-a">
+                <MenuItem
+                  value="home"
+                  onClick={() => handleNavigation("/Home")}
+                >
                   Home <MenuItemCommand>⌘H</MenuItemCommand>
                 </MenuItem>
                 <MenuSeparator />
-                <MenuItem value="new-file-a">
+                <MenuItem
+                  value="about-me"
+                  onClick={() => handleNavigation("/AboutMe")}
+                >
                   About Me <MenuItemCommand>⌘A</MenuItemCommand>
                 </MenuItem>
-                <MenuItem value="new-win-a">
+                <MenuItem
+                  value="resume"
+                  onClick={() => handleNavigation("/Resume")}
+                >
                   Resume <MenuItemCommand>⌘⇧R</MenuItemCommand>
                 </MenuItem>
               </MenuContent>
