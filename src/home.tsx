@@ -1,8 +1,7 @@
-// Import necessary modules and components
 import "./home.css";
-import linkedIn from "/linkedInPhoto.png";
-import Github from "/githubLogo.png";
-import ProfilePhoto from "/newpfp.png";
+import linkedIn from "/linkedInPhoto.png"; // Make sure this is in the public folder
+import Github from "/githubLogo.png"; // Make sure this is in the public folder
+import ProfilePhoto from "/newpfp.png"; // Make sure this is in the public folder
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
 import {
@@ -57,10 +56,18 @@ function Home() {
             </MenuRoot>
           </div>
           <div className="logo-container">
-            <a href="https://www.linkedin.com/in/maanpatel111/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/maanpatel111/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={linkedIn} className="logo" alt="LinkedIn Logo" />
             </a>
-            <a href="https://github.com/MaanPatel2005" target="_blank">
+            <a
+              href="https://github.com/MaanPatel2005"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={Github} className="logo" alt="GitHub Logo" />
             </a>
           </div>

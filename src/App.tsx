@@ -1,5 +1,5 @@
 // Import necessary dependencies and components
-// import "./App.css";
+import "./App.css";
 import Home from "./home";
 import AboutMe from "./aboutMe";
 import Resume from "./resume";
