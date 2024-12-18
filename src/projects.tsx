@@ -47,10 +47,10 @@ function Resume() {
                   About Me <MenuItemCommand>⌘A</MenuItemCommand>
                 </MenuItem>
                 <MenuItem
-                  value="resume"
-                  onClick={() => handleNavigation("/Resume")}
+                  value="projects"
+                  onClick={() => handleNavigation("/Projects")}
                 >
-                  Resume <MenuItemCommand>⌘⇧R</MenuItemCommand>
+                  Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
                 </MenuItem>
               </MenuContent>
             </MenuRoot>

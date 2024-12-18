@@ -52,9 +52,9 @@ function aboutMe() {
                 </MenuItem>
                 <MenuItem
                   value="resume"
-                  onClick={() => handleNavigation("/Resume")}
+                  onClick={() => handleNavigation("/Projects")}
                 >
-                  Resume <MenuItemCommand>⌘⇧R</MenuItemCommand>
+                  Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
                 </MenuItem>
               </MenuContent>
             </MenuRoot>
