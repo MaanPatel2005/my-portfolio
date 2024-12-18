@@ -16,15 +16,17 @@
   }
   
   .header {
+    background-color: #e9e9e9;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: flex-start ;
-    padding: 2rem;
+    padding: 0rem;
   }
   
   .accordianMenu {
-    margin-top: 0%;
+    margin-top: 1.5%;
+    margin-left: 2%;
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items:flex-start; /* Center vertically */
@@ -34,7 +36,7 @@
   }
   
   .logo-container {
-    margin-top: -2%; /* Adds space above the container */
+    margin-top: -0.5%; /* Adds space above the container */
     padding: 0; /* Remove unnecessary padding */
     display: flex; /* Ensure horizontal alignment */
     justify-content: flex-start; /* Align logos to the left */

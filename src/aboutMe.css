@@ -22,3 +22,92 @@
     justify-content: flex-start; /* Align logos to the left */
     align-items: center; /* Align logos vertically */
   }
+
+  .pictures-About {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    gap: 1rem; /* Add equal spacing between images */
+    justify-content: center; /* Center the grid within the container */
+    align-items: center; /* Center items vertically in the grid */
+    margin-left: 10%; /* Center the rectangle on the page */
+    width: 40%; /* Control the overall width of the rectangle */
+    aspect-ratio: 2 / 1; /* Maintain a pleasing rectangle aspect ratio */
+    padding: 1rem; /* Add padding around the grid */
+  }
+  
+  .pictures-About img {
+    width: 100%; /* Ensure each image takes full width of its grid cell */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop and center images for a consistent look */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for aesthetics */
+  }
+  
+  
+  .IndiaGate {
+    width: 10%; /* Set width relative to container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+
+  .PotatoFrit {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    width: 10%; /* Set width relative to container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+
+  .SoloPic {
+    width: 10%; /* Set width relative to container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+
+  .Posted {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    width: 10%; /* Set width relative to container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+  }
+  
+  .text-section-About {
+    width: 40%;
+    margin-left: 3rem;
+    text-align: left;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+  }
+
+  .summary {
+    text-align: left;
+    margin-top: 1rem;
+    color: #555;
+  }
+
+  .body-section {
+    margin-top: 2%;
+    display: flex;
+  }
+
+  .summary p {
+    margin-bottom: 1.5rem; /* Adds space between paragraphs */
+  }
+
+  .about-me-container {
+    width: 100%;
+    background-color: #00aeff; /* Blue background */
+    padding: 1rem; /* Adds padding around the text */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    margin-bottom: 1.5rem; /* Adds space below the container */
+  }
+  
+  .about-me-intro {
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    font-size: 1.5rem; /* Adjust font size if necessary */
+  }
