@@ -16,38 +16,31 @@
   }
   
   .header {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start ;
     padding: 2rem;
   }
   
   .accordianMenu {
+    margin-top: 0%;
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: -3%;
+    align-items:flex-start; /* Center vertically */
     text-align: center;
-    margin-left: 0.5rem;
     font-style: italic;
     font-size: 1rem;
   }
   
   .logo-container {
-    margin-top: -8%;
-    padding: 1% 0; /* Reduce padding to make it smaller */
+    margin-top: -2%; /* Adds space above the container */
+    padding: 0; /* Remove unnecessary padding */
     display: flex; /* Ensure horizontal alignment */
-    justify-content: left; /* Center align logos */
-    align-items: left; /* Align logos vertically */
-    padding-top: 5%;
+    justify-content: flex-start; /* Align logos to the left */
+    align-items: center; /* Align logos vertically */
   }
   
-  .logo {
-    height: 5em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
   
   .logoGithub {
     height: 5em;
@@ -121,6 +114,7 @@
     font-size: 3rem;
     font-weight: bold;
     line-height: 1.2;
+    color: #555;
     margin-bottom: 10px; /* Space between name and dotted line */
   }
   
@@ -135,12 +129,14 @@
   .subtitle {
     font-style: italic;
     font-size: 1rem;
+    color: #555;
     margin-top: 0.5rem;
   }
   
   .description {
     text-align: left;
     margin-top: 1rem;
+    color: #555;
   }
   
   .icons {
@@ -178,4 +174,4 @@
     position: fixed; /* Fixed positioning to stay at the bottom */
     bottom: 0; /* Stick it to the bottom of the viewport */
     left: 0; /* Align it to the left of the page */
-  }
+  } 

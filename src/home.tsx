@@ -1,7 +1,7 @@
 import "./home.css";
-import linkedIn from "/linkedInPhoto.png"; // Make sure this is in the public folder
-import Github from "/githubLogo.png"; // Make sure this is in the public folder
-import ProfilePhoto from "/newpfp.png"; // Make sure this is in the public folder
+import linkedIn from "/linkedInPhoto.png"; // Ensure this is in the public folder
+import Github from "/githubLogo.png"; // Ensure this is in the public folder
+import ProfilePhoto from "/newpfp.png"; // Ensure this is in the public folder
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
 import {
@@ -84,12 +84,13 @@ function Home() {
             <div className="text-section">
               <h1 className="name">Hey, I'm Maan!</h1>
               <div className="dotted-line"></div>{" "}
-              {/* Dotted line between photo and name */}
               <p className="subtitle">Software Engineer | AI Enthusiast</p>
               <p className="description">
-                3rd Year Honors Computer Science at University of California,
-                Irvine. Passionate about technology, coding, and solving complex
-                problems.
+                I am a 3rd Year Honors Computer Science student at the
+                University of California, Irvine. My passions include
+                technology, coding, and solving complex problems. I enjoy
+                building solutions that combine innovation and practicality to
+                create meaningful impacts.
               </p>
             </div>
           </div>

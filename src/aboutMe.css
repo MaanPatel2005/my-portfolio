@@ -1,0 +1,24 @@
+.headerAbout {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start ;
+    padding: 2rem;
+  }
+
+.accordianMenuAbout {
+    margin-top: 0%;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items:flex-start; /* Center vertically */
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+}
+.logo-containerAbout {
+    margin-top: -2%; /* Adds space above the container */
+    padding: 0; /* Remove unnecessary padding */
+    display: flex; /* Ensure horizontal alignment */
+    justify-content: flex-start; /* Align logos to the left */
+    align-items: center; /* Align logos vertically */
+  }
