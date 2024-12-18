@@ -72,6 +72,11 @@
     font-weight: bold;
   }
   
+  .App {
+    max-height: 100%;
+    margin-top: 5%;
+  }
+
   .content {
     display: flex;
     align-items: center;
