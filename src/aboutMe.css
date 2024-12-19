@@ -92,7 +92,8 @@
   .body-section {
     margin-top: 2%;
     display: flex;
-  }
+    padding-bottom: 4rem; /* Adds space below the content for the footer */
+}
 
   .summary p {
     margin-bottom: 1.5rem; /* Adds space between paragraphs */
@@ -111,3 +112,13 @@
     text-align: center; /* Center the text */
     font-size: 1.5rem; /* Adjust font size if necessary */
   }
+
+  .tailoredFooter {
+    background-color: #a7c7e7; /* Baby blue background color */
+    color: #333; /* Dark text for contrast */
+    padding: 1rem; /* Padding for top and bottom of the footer */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it spans the entire width */
+    margin-top: 2rem; /* Add space above the footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  } 

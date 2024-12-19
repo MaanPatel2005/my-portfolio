@@ -91,7 +91,17 @@ function aboutMe() {
                 both business consulting and technology solutions to creatively
                 address complex problems in the industry.{" "}
               </p>{" "}
-              <p></p>{" "}
+              <p>
+                At the University of California, Irvine, I'm an active member of
+                the Product @ UCI team, collaborating with business and computer
+                science students to ideate, develop, and deliver innovative
+                products. My role involves leveraging business consulting
+                strategies to refine and customize products to meet client
+                needs, ensuring their successful market positioning. As a
+                software developer, I work in partnership with the marketing
+                team and product managers to meet project requirements and
+                deliver high-quality, customer-centric solutions.
+              </p>{" "}
               <p>
                 {" "}
                 Beyond academics, I serve as a Resident Advisor within my
