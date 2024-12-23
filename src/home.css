@@ -35,6 +35,33 @@
     font-size: 1rem;
   }
   
+  .TypeWriter {
+    margin-top: 1%;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    font-family: monospace;
+    border-right: 5px solid #007BFF; /* A thinner border for a single bar */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .dynamic-word {
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  @keyframes deleting {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+
   .logo-container {
     margin-top: -0.5%; /* Adds space above the container */
     padding: 0; /* Remove unnecessary padding */

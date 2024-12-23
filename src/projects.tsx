@@ -20,6 +20,7 @@ import {
 } from "./components/ui/menu";
 import { useNavigate } from "react-router-dom";
 import { HStack } from "@chakra-ui/react";
+import DynamicTyping from "./dynamicTyping";
 
 function Projects() {
   const navigate = useNavigate();
@@ -85,6 +86,9 @@ function Projects() {
                 </MenuItem>
               </MenuContent>
             </MenuRoot>
+          </div>
+          <div className="TypeWriter">
+            <DynamicTyping />
           </div>
           <div className="logo-container">
             <a

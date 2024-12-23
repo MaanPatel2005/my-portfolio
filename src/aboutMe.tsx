@@ -17,6 +17,7 @@ import {
   MenuTrigger,
 } from "./components/ui/menu";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import DynamicTyping from "./dynamicTyping";
 
 function aboutMe() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
@@ -58,6 +59,9 @@ function aboutMe() {
                 </MenuItem>
               </MenuContent>
             </MenuRoot>
+          </div>
+          <div className="TypeWriter">
+            <DynamicTyping />
           </div>
           <div className="logo-container">
             <a

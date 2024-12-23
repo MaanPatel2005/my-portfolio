@@ -1,7 +1,4 @@
-import "./home.css";
-import linkedIn from "/linkedInPhoto.png"; // Ensure this is in the public folder
-import Github from "/githubLogo.png"; // Ensure this is in the public folder
-import ProfilePhoto from "/newpfp.png"; // Ensure this is in the public folder
+import React, { useEffect, useState } from "react"; // Import hooks for state and effect
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
 import {
@@ -12,12 +9,17 @@ import {
   MenuSeparator,
   MenuTrigger,
 } from "./components/ui/menu";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { To, useNavigate } from "react-router-dom";
+import linkedIn from "/linkedInPhoto.png";
+import Github from "/githubLogo.png";
+import ProfilePhoto from "/newpfp.png";
+import "./home.css";
+import DynamicTyping from "./dynamicTyping";
 
 function Home() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path: To) => {
     navigate(path); // Navigate to the specified path
   };
 
@@ -47,7 +49,7 @@ function Home() {
                   About Me <MenuItemCommand>⌘A</MenuItemCommand>
                 </MenuItem>
                 <MenuItem
-                  value="resume"
+                  value="projects"
                   onClick={() => handleNavigation("/Projects")}
                 >
                   Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
@@ -55,6 +57,11 @@ function Home() {
               </MenuContent>
             </MenuRoot>
           </div>
+
+          <div className="TypeWriter">
+            <DynamicTyping />
+          </div>
+
           <div className="logo-container">
             <a
               href="https://www.linkedin.com/in/maanpatel111/"
@@ -72,6 +79,7 @@ function Home() {
             </a>
           </div>
         </div>
+
         <div className="App">
           <div className="content">
             <div className="photo-frame">
@@ -83,7 +91,7 @@ function Home() {
             </div>
             <div className="text-section">
               <h1 className="name">Hey, I'm Maan!</h1>
-              <div className="dotted-line"></div>{" "}
+              <div className="dotted-line"></div>
               <p className="subtitle">Software Engineer | AI Enthusiast</p>
               <p className="description">
                 I am a 3rd Year Honors Computer Science student at the
@@ -95,6 +103,7 @@ function Home() {
             </div>
           </div>
         </div>
+
         <footer>
           <p>&copy; 2024 Maan Patel. All rights reserved.</p>
         </footer>
