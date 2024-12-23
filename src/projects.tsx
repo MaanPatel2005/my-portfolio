@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import "./projects.css";
-
 import InSyncDash from "/InSyncDash.png";
 import InSyncTable from "/InSyncTable.png";
 import WABI1 from "/WABI1.png";
@@ -21,6 +20,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { HStack } from "@chakra-ui/react";
 import DynamicTyping from "./dynamicTyping";
+import { Tooltip } from "./components/ui/tooltip";
 
 function Projects() {
   const navigate = useNavigate();
@@ -91,27 +91,33 @@ function Projects() {
             <DynamicTyping />
           </div>
           <div className="logo-container">
-            <a
-              href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreffer"
-            >
-              <FaFileAlt className="logo" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/maanpatel111/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="logo" />
-            </a>
-            <a
-              href="https://github.com/MaanPatel2005"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="logo" />
-            </a>
+            <Tooltip content="Resume">
+              <a
+                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreffer"
+              >
+                <FaFileAlt className="logo" />
+              </a>
+            </Tooltip>
+            <Tooltip content="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/maanpatel111/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="logo" />
+              </a>
+            </Tooltip>
+            <Tooltip content="GitHub">
+              <a
+                href="https://github.com/MaanPatel2005"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="logo" />
+              </a>
+            </Tooltip>
           </div>
         </div>
         <div className="body-section-projects">

@@ -17,6 +17,7 @@ import {
 } from "./components/ui/menu";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import DynamicTyping from "./dynamicTyping";
+import { Tooltip } from "./components/ui/tooltip";
 
 function aboutMe() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
@@ -63,27 +64,33 @@ function aboutMe() {
             <DynamicTyping />
           </div>
           <div className="logo-container">
-            <a
-              href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreffer"
-            >
-              <FaFileAlt className="logo" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/maanpatel111/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="logo" />
-            </a>
-            <a
-              href="https://github.com/MaanPatel2005"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="logo" />
-            </a>
+            <Tooltip content="Resume">
+              <a
+                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreffer"
+              >
+                <FaFileAlt className="logo" />
+              </a>
+            </Tooltip>
+            <Tooltip content="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/maanpatel111/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="logo" />
+              </a>
+            </Tooltip>
+            <Tooltip content="GitHub">
+              <a
+                href="https://github.com/MaanPatel2005"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="logo" />
+              </a>
+            </Tooltip>
           </div>
         </div>
         <div className="body-section">
