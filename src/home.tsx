@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"; // Import hooks for state and effect
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
+import { FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
   MenuContent,
   MenuItem,
@@ -64,18 +65,25 @@ function Home() {
 
           <div className="logo-container">
             <a
+              href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreffer"
+            >
+              <FaFileAlt className="logo" />
+            </a>
+            <a
               href="https://www.linkedin.com/in/maanpatel111/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkedIn} className="logo" alt="LinkedIn Logo" />
+              <FaLinkedin className="logo" />
             </a>
             <a
               href="https://github.com/MaanPatel2005"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Github} className="logo" alt="GitHub Logo" />
+              <FaGithub className="logo" />
             </a>
           </div>
         </div>

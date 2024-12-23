@@ -36,6 +36,7 @@
   }
   
   .TypeWriter {
+    margin-right: -10%;
     margin-top: 1%;
     font-size: 1.5em;
     letter-spacing: 2px;
@@ -63,34 +64,18 @@
 
 
   .logo-container {
-    margin-top: -0.5%; /* Adds space above the container */
-    padding: 0; /* Remove unnecessary padding */
-    display: flex; /* Ensure horizontal alignment */
-    justify-content: flex-start; /* Align logos to the left */
-    align-items: center; /* Align logos vertically */
-  }
-  
-  
-  .logoGithub {
-    height: 5em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  
-  .logoGithub:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
+    margin-top: -.4%; /* Adjusts the space above the container */
+    padding: 0rem; /* Adds some padding for spacing */
+    display: flex; /* Ensures horizontal alignment */
+    justify-content: center; /* Spaces items evenly with gaps */
+    align-items: center; /* Aligns logos vertically */
+    width: 15%; /* Adjusted width for more breathing room */
+    gap: -1rem; /* Adds consistent spacing between logos */
+}
   
   .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    width: 120%;
+    color: black;
   }
   
   .blog-link {
