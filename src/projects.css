@@ -1,0 +1,149 @@
+/* General body and page layout */
+body {
+    font-family: 'Georgia';
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh; /* Ensures the body takes full height of the viewport */
+}
+
+/* Main content section */
+.body-section-projects {
+    padding: 40px;
+    margin-bottom: 10%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    flex-grow: 1; /* Allows the section to grow and fill available space */
+}
+
+/* Styling for each project section */
+.Insync, .WABI, .ZotResearch {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align the items at the top */
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    padding: 30px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+    flex-grow: 1; /* Makes each section take available space */
+    gap: 5%;
+}
+
+.Insync:hover, .WABI:hover, .ZotResearch:hover {
+    transform: translateY(-5px); /* Elevate the section on hover */
+}
+
+/* Text styling for project titles and descriptions */
+.Insync-Text, .WABI-Text, .ZotResearch-Text {
+    flex: 0 0 45%; /* Allocate 45% of space for text */
+    text-align: center;
+    width: 100%;
+}
+
+.Insync-Text h1, .WABI-Text h1, .ZotResearch-Text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    background-color: #00d5ff; /* White background for each section */
+    border-radius: 10px; /* Rounded corners for a card-like feel */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.Insync-Text p, .WABI-Text p, .ZotResearch-Text p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 100%;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Better readability with line spacing */
+}
+
+/* Image styling */
+.Insync-Images, .WABI-Images, .ZotResearch-Images {
+    flex: 0 0 55%; /* Allocate 55% of space for images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow images to wrap if necessary */
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%; /* Ensure images fill up the available space */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Pagination button styling */
+.pagination-Insync, .pagination-WABI, .pagination-ZotResearch {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagination-Insync button, .pagination-WABI button, .pagination-ZotResearch button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination-Insync button:hover, .pagination-WABI button:hover, .pagination-ZotResearch button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Button slight grow effect on hover */
+}
+
+.pagination-Insync button:disabled, .pagination-WABI button:disabled, .pagination-ZotResearch button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Footer styling */
+.project-footer {
+    margin-top: 10%;
+    background-color: #a7c7e7; /* Baby blue background color */
+    color: #333; /* Dark text for contrast */
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .body-section-projects {
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .Insync-Images, .WABI-Images, .ZotResearch-Images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagination-Insync, .pagination-WABI, .pagination-ZotResearch {
+        flex-direction: column;
+    }
+}

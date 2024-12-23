@@ -140,7 +140,7 @@ function aboutMe() {
             </div>
           </div>
         </div>
-        <footer>
+        <footer className="tailoredFooter">
           <p>&copy; 2024 Maan Patel. All rights reserved.</p>
         </footer>
       </Provider>
