@@ -14,6 +14,7 @@ import { Tooltip } from "./components/ui/tooltip";
 import ProfilePhoto from "/newpfp.png";
 import "./home.css";
 import DynamicTyping from "./dynamicTyping";
+import { MenuItemIndicator } from "@chakra-ui/react";
 
 function Home() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
@@ -52,6 +53,12 @@ function Home() {
                   onClick={() => handleNavigation("/Projects")}
                 >
                   Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
+                </MenuItem>
+                <MenuItem
+                  value="experiences"
+                  onClick={() => handleNavigation("/Experiences")}
+                >
+                  Experiences <MenuItemCommand>⌘E</MenuItemCommand>
                 </MenuItem>
               </MenuContent>
             </MenuRoot>

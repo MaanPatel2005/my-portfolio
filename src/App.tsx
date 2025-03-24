@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./home";
 import AboutMe from "./aboutMe";
 import Projects from "./projects";
+import Experiences from "./experiences";
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/AboutMe" element={<AboutMe />} />
+          <Route path="/Experiences" element={<Experiences />} />
         </Routes>
       </Router>
     </>

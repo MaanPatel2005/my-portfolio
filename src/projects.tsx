@@ -84,6 +84,12 @@ function Projects() {
                 >
                   Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
                 </MenuItem>
+                <MenuItem
+                  value="experiences"
+                  onClick={() => handleNavigation("/Experiences")}
+                >
+                  Experiences <MenuItemCommand>⌘E</MenuItemCommand>
+                </MenuItem>
               </MenuContent>
             </MenuRoot>
           </div>

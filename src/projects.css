@@ -45,13 +45,14 @@ body {
 
 .Insync-Text h1, .WABI-Text h1, .ZotResearch-Text h1 {
     font-size: 2.5rem;
-    color: #333;
-    background-color: #00d5ff; /* White background for each section */
-    border-radius: 10px; /* Rounded corners for a card-like feel */
+    color: white;
+    background-color: #00aeff;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     margin-bottom: 10px;
     font-weight: 600;
+    padding: 1rem;
 }
 
 .Insync-Text p, .WABI-Text p, .ZotResearch-Text p {
