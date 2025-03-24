@@ -14,7 +14,7 @@ import { Tooltip } from "./components/ui/tooltip";
 import ProfilePhoto from "/newpfp.png";
 import "./home.css";
 import DynamicTyping from "./dynamicTyping";
-import { MenuItemIndicator } from "@chakra-ui/react";
+//import { MenuItemIndicator } from "@chakra-ui/react";
 
 function Home() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
