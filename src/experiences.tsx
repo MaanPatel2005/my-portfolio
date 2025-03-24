@@ -29,7 +29,7 @@ const experiences: Experience[] = [
   {
     title: "Incoming Technology Intern",
     company: "Ernst & Young (EY)",
-    duration: "June 2025",
+    duration: "Jun 2025",
     location: "Los Angeles, CA",
     description: [
       "Executing technical tasks related to detecting, preventing and responding to legal and compliance risks that corporations face.",
@@ -40,6 +40,18 @@ const experiences: Experience[] = [
       "Collaborating with team members to think critically and assist in the development and integration of enhanced policies, processes and technologies that will address clients’ needs.",
     ],
     technologies: ["Python", "SQL", "Git"],
+  },
+  {
+    title: "UROP Researcher",
+    company: "UC Irvine Informatics Department",
+    duration: "Jan 2025 - Present",
+    location: "Irvine, CA",
+    description: [
+      "Integrating AI into Agile Methodologies by optimizing task based allocation.",
+      "Utilizing Python and sentiment analysis to compare past tasks to present ones to find out who the task should be assigned to.",
+      "Optimizing time to allocate tasks by over 20%.",
+    ],
+    technologies: ["Python", "MySQL", "AWS", "Git"],
   },
   {
     title: "Software Engineer",
