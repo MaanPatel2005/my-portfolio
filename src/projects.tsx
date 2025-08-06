@@ -6,9 +6,13 @@ import InSyncTable from "/InSyncTable.png";
 import WABI1 from "/WABI1.png";
 import Zot1 from "/ZotResearch1.png";
 import Zot2 from "/ZotResearch2.png";
+import UnibitesScreenshot from "/unibites.png";
+import UnibitesScreenshot2 from "/unibites2.png";
+import MakapoScreenshot from "/makapo.png";
+import TaskAllocationScreenshot from "/taskallocation.png";
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
-import { FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+
 import {
   MenuContent,
   MenuItem,
@@ -27,6 +31,9 @@ function Projects() {
   const [insyncPage, setInsyncPage] = useState(1); // Separate state for InSync
   const [wabiPage, setWabiPage] = useState(1); // Separate state for WABI
   const [zotPage, setZotPage] = useState(1);
+  const [unibitesPage, setUnibitesPage] = useState(1); // Separate state for Unibites
+  const [aiTaskPage, setAiTaskPage] = useState(1); // Separate state for AI Task Allocation
+  const [makapoPage, setMakapoPage] = useState(1); // Separate state for Makapo Aquatics
 
   // Log changes to insyncPage
   useEffect(() => {}, [insyncPage]);
@@ -49,6 +56,21 @@ function Projects() {
     setZotPage(page);
   };
 
+  const handleUnibitesPageChange = (page: number, event: React.MouseEvent) => {
+    event.preventDefault();
+    setUnibitesPage(page);
+  };
+
+  const handleAiTaskPageChange = (page: number, event: React.MouseEvent) => {
+    event.preventDefault();
+    setAiTaskPage(page);
+  };
+
+  const handleMakapoPageChange = (page: number, event: React.MouseEvent) => {
+    event.preventDefault();
+    setMakapoPage(page);
+  };
+
   const handleNavigation = (path: string) => {
     navigate(path);
   };
@@ -57,7 +79,7 @@ function Projects() {
     <>
       <Provider>
         <div className="header">
-          <div className="accordianMenu">
+          <div className="menu-container">
             <MenuRoot>
               <MenuTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -93,40 +115,152 @@ function Projects() {
               </MenuContent>
             </MenuRoot>
           </div>
-          <div className="TypeWriter">
+          <div className="typewriter-wrapper">
             <DynamicTyping />
-          </div>
-          <div className="logo-container">
-            <Tooltip content="Resume">
-              <a
-                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreffer"
-              >
-                <FaFileAlt className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="LinkedIn">
-              <a
-                href="https://www.linkedin.com/in/maanpatel111/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="GitHub">
-              <a
-                href="https://github.com/MaanPatel2005"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="logo" />
-              </a>
-            </Tooltip>
           </div>
         </div>
         <div className="body-section-projects">
+          <div className="AI-Task-Allocation">
+            <div className="AI-Task-Allocation-Text">
+              <h1>AI-Assisted Task Allocation</h1>
+              <p>
+                Built an AI-driven task allocation system using the TAWOS
+                dataset, achieving 73.96% alignment with project manager
+                decisions via CodeBERT embeddings and cosine similarity scoring.
+              </p>
+              <p>
+                Designed a modular pipeline for task similarity modeling and
+                ranking, supporting flexible ML experimentation. Improved task
+                assignment quality by 45% through sentiment analysis and code
+                quality ratings to gauge developer comfort and fit.
+              </p>
+              <p>Technologies Used: Python, PyTorch, AWS RDS, MySQL</p>
+            </div>
+            <div className="AI-Task-Allocation-Rendering">
+              <div className="AI-Task-Allocation-Images">
+                {aiTaskPage === 1 && (
+                  <img
+                    src={TaskAllocationScreenshot}
+                    className="TaskAllocationScreenshot"
+                    alt="AI Task Allocation Dashboard"
+                  />
+                )}
+              </div>
+              <div className="pagination-AI-Task-Allocation">
+                <HStack>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => handleAiTaskPageChange(1, e)}
+                    disabled={aiTaskPage === 1}
+                  >
+                    1
+                  </Button>
+                </HStack>
+              </div>
+            </div>
+          </div>
+
+          <div className="Makapo-Aquatics">
+            <div className="Makapo-Aquatics-Text">
+              <h1>Makapo Aquatics Project</h1>
+              <p>
+                Developed a HIPAA-compliant web platform for Makapo,
+                streamlining athlete training documentation and secure data
+                storage using AWS RDS, STS, and encrypted MySQL, reducing manual
+                logging time by 60% and enabling 65% user scalability.
+              </p>
+              <p>
+                Integrated AI-powered tools to convert speech into structured
+                training notes via media tokenization and natural language
+                processing, boosting documentation accuracy by 45%.
+              </p>
+              <p>
+                Technologies Used: AWS RDS, MySQL, Google Cloud Services,
+                Tailwind, Firebase Auth, Docker
+              </p>
+            </div>
+            <div className="Makapo-Aquatics-Rendering">
+              <div className="Makapo-Aquatics-Images">
+                {makapoPage === 1 && (
+                  <img
+                    src={MakapoScreenshot}
+                    className="MakapoScreenshot"
+                    alt="Makapo Aquatics Platform"
+                  />
+                )}
+              </div>
+              <div className="pagination-Makapo-Aquatics">
+                <HStack>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => handleMakapoPageChange(1, e)}
+                    disabled={makapoPage === 1}
+                  >
+                    1
+                  </Button>
+                </HStack>
+              </div>
+            </div>
+          </div>
+
+          <div className="Unibites">
+            <div className="Unibites-Text">
+              <h1>Unibites</h1>
+              <p>
+                Designed and launched Unibites, a scalable food access platform
+                used by 1,000+ daily users across a 30,000-student campus,
+                reducing food waste by 25% through real-time event aggregation
+                and intuitive meal discovery.
+              </p>
+              <p>
+                Led product design and user validation efforts by conducting 22
+                user interviews, wireframing in Figma, and iterating on
+                prototypes to align the platform with student needs and usage
+                patterns.
+              </p>
+              <p>
+                Technologies Used: Figma, User Research, Agile Development, MVP
+                Strategy, React.js, Node.js, Supabase, Webscraping
+              </p>
+            </div>
+            <div className="Unibites-Rendering">
+              <div className="Unibites-Images">
+                {unibitesPage === 1 && (
+                  <img
+                    src={UnibitesScreenshot2}
+                    className="UnibitesScreenshot2"
+                    alt="Unibites Dashboard"
+                  />
+                )}
+                {unibitesPage === 2 && (
+                  <img
+                    src={UnibitesScreenshot}
+                    className="UnibitesScreenshot"
+                    alt="Unibites Platform"
+                  />
+                )}
+              </div>
+              <div className="pagination-Unibites">
+                <HStack>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => handleUnibitesPageChange(1, e)}
+                    disabled={unibitesPage === 1}
+                  >
+                    1
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => handleUnibitesPageChange(2, e)}
+                    disabled={unibitesPage === 2}
+                  >
+                    2
+                  </Button>
+                </HStack>
+              </div>
+            </div>
+          </div>
+
           <div className="Insync">
             <div className="Insync-Text">
               <h1>InSync</h1>
@@ -308,8 +442,9 @@ function Projects() {
             </div>
           </div>
         </div>
+
         <footer className="project-footer">
-          <p>&copy; 2024 Maan Patel. All rights reserved.</p>
+          <p>&copy; 2025 Maan Patel. All rights reserved.</p>
         </footer>
       </Provider>
     </>

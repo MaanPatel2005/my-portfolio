@@ -1,9 +1,9 @@
 import React from "react";
-import "./experiences.css";
 import "./home.css";
+import "./experiences.css";
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
-import { FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+
 import {
   MenuContent,
   MenuItem,
@@ -27,49 +27,35 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Incoming Technology Intern",
-    company: "Ernst & Young (EY)",
-    duration: "Jun 2025",
+    title: "AI / Machine Learning Intern",
+    company: "Ernst & Young",
+    duration: "June 2025 - August 2025",
     location: "Los Angeles, CA",
     description: [
-      "Executing technical tasks related to detecting, preventing and responding to legal and compliance risks that corporations face.",
+      "Designed and implemented a dashboard that applies natural language processing to extract requirements and generate draft RFP responses, reducing turnaround time by 75% and minimizing manual input by 60%.",
       "Performing quality checks on work products to confirm that EY clients receive high quality deliverables.",
       "Proactively and effectively communicating project and task status and outputs to various stakeholders.",
       "Developing strong relationships among team members and building productive working relationships with clients to deliver exceptional client service.",
       "Utilizing technology to continually learn and develop skills in discovery, digital forensics and forensic data analytics.",
       "Collaborating with team members to think critically and assist in the development and integration of enhanced policies, processes and technologies that will address clients’ needs.",
     ],
-    technologies: ["Python", "SQL", "Git"],
-  },
-  {
-    title: "UROP Researcher",
-    company: "UC Irvine Informatics Department",
-    duration: "Jan 2025 - Present",
-    location: "Irvine, CA",
-    description: [
-      "Integrating AI into Agile Methodologies by optimizing task based allocation.",
-      "Utilizing Python and sentiment analysis to compare past tasks to present ones to find out who the task should be assigned to.",
-      "Optimizing time to allocate tasks by over 20%.",
+    technologies: [
+      "SQL",
+      "React.js",
+      "Node.js",
+      "Microsoft Azure",
+      "PowerBI",
+      "Tableau",
+      "Python",
+      "PySpark",
+      "Scikit Learn",
     ],
-    technologies: ["Python", "MySQL", "AWS", "Git"],
   },
   {
-    title: "Software Engineer",
-    company: "Product @ UCI",
-    duration: "Jan 2025 - Present",
-    location: "Irvine, CA",
-    description: [
-      "Leading the development of UniBites, a B2B web application that organizes customer feedback on university dining hall offerings to help dining halls to cut costs and reduce food waste to promote sustainability. Applying Product Lifecycle Management principles to enhance scalability, user adoption, and long-term maintainability.",
-      "Implementing a robust backend API and a responsive UI to improve UI/UX and overall user engagement. Ensuring secure user access through authentication, integrating authorization mechanisms to protect user data and enhance system security.",
-      "Conducted and synthesized insights from 40+ user interviews, addressing the needs of a 30,000+ user base by refining features and optimizing usability.",
-    ],
-    technologies: ["Supabase", "React Native", "SQL", "Figma", "Docker", "Git"],
-  },
-  {
-    title: "AI Engineering Intern ",
+    title: "AI Engineering Intern",
     company: "Infosys",
-    duration: "Jul 2024 - Aug 2024",
-    location: "Bangalore, India",
+    duration: "Jul 2024 - Sept 2024",
+    location: "Bangalore, IND",
     description: [
       "Developed and deployed advanced robotics automation systems to enhance the interactivity and effectiveness of classroom learning environments. Created proof of concept to generate $50,000 USD in investments into the project.",
       "Leveraged computer vision solutions and machine learning to design and implement autonomous movement for a robot based on the calculations of cost maps, and the optimization of least-cost paths using pathfinding algorithms.",
@@ -84,13 +70,13 @@ const experiences: Experience[] = [
     ],
   },
   {
-    title: "Full Stack Developer ",
-    company: "Commit the Change",
+    title: "Full Stack Developer",
+    company: "Commit The Change",
     duration: "Oct 2023 - Jun 2024",
     location: "Irvine, CA",
     description: [
-      "Architected a scalable website for an NPO, Feeding Pets of the Homeless, driving a donation increase from 250k lbs to over 2 million through the automation of data entry and retrieval processes.",
-      "Constructed the RESTful API from scratch; designed an intuitive UI/UX using React.js, improving user engagement by 25% through the use of Figma for wire framing and design consistency.",
+      "Built a scalable donation tracking website for Feeding Pets of the Homeless, increasing food donations from 250k lbs to +2M lbs by automating data workflows and notification management to donors.",
+      "Developed 6 custom RESTful API endpoints and a PostgreSQL database from scratch, deployed on AWS EC2 and RDS to ensure reliable access and efficient data retrieval.",
     ],
     technologies: [
       "RESTful API",
@@ -118,7 +104,7 @@ const Experiences: React.FC = () => {
     <>
       <Provider>
         <div className="header">
-          <div className="accordianMenu">
+          <div className="menu-container">
             <MenuRoot>
               <MenuTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -155,38 +141,8 @@ const Experiences: React.FC = () => {
             </MenuRoot>
           </div>
 
-          <div className="TypeWriter">
+          <div className="typewriter-wrapper">
             <DynamicTyping />
-          </div>
-
-          <div className="logo-container">
-            <Tooltip content="Resume">
-              <a
-                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreffer"
-              >
-                <FaFileAlt className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="LinkedIn">
-              <a
-                href="https://www.linkedin.com/in/maanpatel111/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="GitHub">
-              <a
-                href="https://github.com/MaanPatel2005"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="logo" />
-              </a>
-            </Tooltip>
           </div>
         </div>
 
@@ -224,8 +180,8 @@ const Experiences: React.FC = () => {
             ))}
           </div>
         </div>
-        <footer className="project-footer">
-          <p>&copy; 2024 Maan Patel. All rights reserved.</p>
+        <footer>
+          <p>&copy; 2025 Maan Patel. All rights reserved.</p>
         </footer>
       </Provider>
     </>

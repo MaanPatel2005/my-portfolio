@@ -22,7 +22,7 @@ body {
 }
 
 /* Styling for each project section */
-.Insync, .WABI, .ZotResearch {
+.Insync, .WABI, .ZotResearch, .AI-Task-Allocation, .Makapo-Aquatics, .Unibites {
     display: flex;
     flex-direction: row;
     align-items: center; /* Align the items at the top */
@@ -37,13 +37,13 @@ body {
 
 
 /* Text styling for project titles and descriptions */
-.Insync-Text, .WABI-Text, .ZotResearch-Text {
+.Insync-Text, .WABI-Text, .ZotResearch-Text, .AI-Task-Allocation-Text, .Makapo-Aquatics-Text, .Unibites-Text {
     flex: 0 0 45%; /* Allocate 45% of space for text */
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 
-.Insync-Text h1, .WABI-Text h1, .ZotResearch-Text h1 {
+.Insync-Text h1, .WABI-Text h1, .ZotResearch-Text h1, .AI-Task-Allocation-Text h1, .Makapo-Aquatics-Text h1, .Unibites-Text h1 {
     font-size: 2.5rem;
     color: white;
     background-color: #00aeff;
@@ -53,9 +53,10 @@ body {
     margin-bottom: 10px;
     font-weight: 600;
     padding: 1rem;
+    text-align: center;
 }
 
-.Insync-Text p, .WABI-Text p, .ZotResearch-Text p {
+.Insync-Text p, .WABI-Text p, .ZotResearch-Text p, .AI-Task-Allocation-Text p, .Makapo-Aquatics-Text p, .Unibites-Text p {
     font-size: 1.2rem;
     color: #555;
     max-width: 100%;
@@ -64,7 +65,7 @@ body {
 }
 
 /* Image styling */
-.Insync-Images, .WABI-Images, .ZotResearch-Images {
+.Insync-Images, .WABI-Images, .ZotResearch-Images, .Unibites-Images, .AI-Task-Allocation-Images, .Makapo-Aquatics-Images {
     flex: 0 0 55%; /* Allocate 55% of space for images */
     display: flex;
     justify-content: center;
@@ -86,15 +87,30 @@ img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
+/* Placeholder image styling */
+.placeholder-image {
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 /* Pagination button styling */
-.pagination-Insync, .pagination-WABI, .pagination-ZotResearch {
+.pagination-Insync, .pagination-WABI, .pagination-ZotResearch, .pagination-Unibites, .pagination-AI-Task-Allocation, .pagination-Makapo-Aquatics {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.pagination-Insync button, .pagination-WABI button, .pagination-ZotResearch button {
+.pagination-Insync button, .pagination-WABI button, .pagination-ZotResearch button, .pagination-Unibites button, .pagination-AI-Task-Allocation button, .pagination-Makapo-Aquatics button {
     background-color: #007BFF;
     color: white;
     border: none;

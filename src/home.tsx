@@ -1,6 +1,5 @@
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
-import { FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
   MenuContent,
   MenuItem,
@@ -27,7 +26,7 @@ function Home() {
     <>
       <Provider>
         <div className="header">
-          <div className="accordianMenu">
+          <div className="menu-container">
             <MenuRoot>
               <MenuTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -64,38 +63,8 @@ function Home() {
             </MenuRoot>
           </div>
 
-          <div className="TypeWriter">
+          <div className="typewriter-wrapper">
             <DynamicTyping />
-          </div>
-
-          <div className="logo-container">
-            <Tooltip content="Resume">
-              <a
-                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreffer"
-              >
-                <FaFileAlt className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="LinkedIn">
-              <a
-                href="https://www.linkedin.com/in/maanpatel111/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="GitHub">
-              <a
-                href="https://github.com/MaanPatel2005"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="logo" />
-              </a>
-            </Tooltip>
           </div>
         </div>
 
@@ -111,20 +80,21 @@ function Home() {
             <div className="text-section">
               <h1 className="name">Hey, I'm Maan!</h1>
               <div className="dotted-line"></div>
-              <p className="subtitle">Software Engineer | AI Enthusiast</p>
+              <p className="subtitle">AI/ML Engineer | Software Engineer</p>
               <p className="description">
-                I am a 3rd Year Honors Computer Science student at the
-                University of California, Irvine. My passions include
-                technology, coding, and solving complex problems. I enjoy
-                building solutions that combine innovation and practicality to
-                create meaningful impacts.
+                I am a Computer Science student at the University of California,
+                Irvine. My passions include technology, coding, and solving
+                complex problems. I enjoy building solutions that combine
+                innovation and practicality to create meaningful impacts.
+                Outside of work, I enjoy playing basketball, watching movies,
+                and spending time with my friends and family!
               </p>
             </div>
           </div>
         </div>
 
         <footer>
-          <p>&copy; 2024 Maan Patel. All rights reserved.</p>
+          <p>&copy; 2025 Maan Patel. All rights reserved.</p>
         </footer>
       </Provider>
     </>

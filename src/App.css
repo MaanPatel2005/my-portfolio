@@ -15,12 +15,7 @@ body {
   min-height: 100vh;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-}
+
 
 .accordianMenu {
   display: flex; /* Use flexbox for centering */

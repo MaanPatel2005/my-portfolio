@@ -6,7 +6,7 @@ import Solo from "/solo.png";
 import PostedPic from "/posted.png";
 import { Provider } from "./components/ui/provider";
 import { Button } from "./components/ui/button";
-import { FaFileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+
 import {
   MenuContent,
   MenuItem,
@@ -30,7 +30,7 @@ function aboutMe() {
     <>
       <Provider>
         <div className="header">
-          <div className="accordianMenu">
+          <div className="menu-container">
             <MenuRoot>
               <MenuTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -66,37 +66,8 @@ function aboutMe() {
               </MenuContent>
             </MenuRoot>
           </div>
-          <div className="TypeWriter">
+          <div className="typewriter-wrapper">
             <DynamicTyping />
-          </div>
-          <div className="logo-container">
-            <Tooltip content="Resume">
-              <a
-                href="https://docs.google.com/document/d/1fpMcvnFWumCQRYrS1OAorTpvs-jO6Kn5x6ly_YYssdg/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreffer"
-              >
-                <FaFileAlt className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="LinkedIn">
-              <a
-                href="https://www.linkedin.com/in/maanpatel111/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="logo" />
-              </a>
-            </Tooltip>
-            <Tooltip content="GitHub">
-              <a
-                href="https://github.com/MaanPatel2005"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="logo" />
-              </a>
-            </Tooltip>
           </div>
         </div>
         <div className="body-section">
@@ -108,22 +79,40 @@ function aboutMe() {
               {" "}
               <p>
                 {" "}
-                My name is Maan Patel, and I am currently a second-year student
-                at the University of California, Irvine, pursuing an Honors
-                degree in Computer Science. I am passionate about leveraging
-                both business consulting and technology solutions to creatively
-                address complex problems in the industry.{" "}
+                My name is Maan Patel, and I am currently in my last year as a
+                Computer Science student at the University of California,
+                Irvine, with an expected graduation in June 2026. I maintain a
+                3.78 GPA and am passionate about leveraging both business
+                consulting and technology solutions to creatively address
+                complex problems in the industry.{" "}
               </p>{" "}
               <p>
-                At the University of California, Irvine, I'm an active member of
-                the Product @ UCI team, collaborating with business and computer
-                science students to ideate, develop, and deliver innovative
-                products. My role involves leveraging business consulting
-                strategies to refine and customize products to meet client
-                needs, ensuring their successful market positioning. As a
-                software developer, I work in partnership with the marketing
-                team and product managers to meet project requirements and
-                deliver high-quality, customer-centric solutions.
+                At the University of California, Irvine, I serve as the
+                Marketing Chair for AI@UCI, the largest AI club on campus. In
+                this role, I direct all marketing and branding efforts to
+                strengthen community impact and recognition, organizing events
+                and workshops that bring together students passionate about
+                artificial intelligence and machine learning. I'm also an active
+                member of the Product @ UCI team, where I provide technical
+                support to software engineers and marketing teams while
+                leveraging my consulting expertise to bridge technical
+                implementation with business objectives. I collaborate with
+                cross-functional teams to ideate, develop, and deliver
+                innovative products, ensuring solutions align with client needs
+                and market demands.
+              </p>{" "}
+              <p>
+                {" "}
+                I have gained valuable industry experience through internships
+                at Ernst & Young as an AI/Machine Learning Intern, where I
+                designed and implemented NLP-powered dashboards and developed
+                XGBoost-based classifiers that significantly improved
+                operational efficiency. I also interned at Infosys in Bangalore,
+                where I developed advanced robotics automation systems and
+                implemented computer vision solutions for autonomous movement.
+                Additionally, I worked as a Full Stack Developer at Commit The
+                Change, building scalable donation tracking systems that
+                increased food donations from 250k lbs to over 2M lbs.{" "}
               </p>{" "}
               <p>
                 {" "}
@@ -131,24 +120,22 @@ function aboutMe() {
                 housing community, collaborating with department heads in
                 Information & Computer Sciences and Engineering to organize
                 events that enable residents to expand their networks and
-                explore research opportunities at UCI.{" "}
+                explore research opportunities at UCI. I also work as a Learning
+                Assistant for my school's algorithms course, where I help
+                students master complex data structures and algorithmic
+                concepts. Additionally, I take the initiative to offer tutoring
+                sessions for ICS 46, UCI's data structures and algorithms
+                course, helping students improve their grades by an average of
+                10% through my free tutoring program.{" "}
               </p>{" "}
               <p>
                 {" "}
-                In addition, I take the initiative to offer tutoring sessions
-                for ICS 46, UCI's data structures and algorithms course. Due to
-                a lack of budget for official tutoring services, I proactively
-                launched my own free tutoring program to support students in
-                mastering this critical subject. As a result, I helped students
-                improve their grades by an average of 10%, and my program has
-                grown to accommodate up to 15 students per session. Although it
-                is still in its early stages, I am working on scaling this
-                initiative to support other courses in the future.{" "}
-              </p>{" "}
-              <p>
-                {" "}
-                In my free time, I enjoy staying active through fitness,
-                spending quality time with family, and traveling.{" "}
+                In my free time, I enjoy staying active through fitness, playing
+                basketball, watching movies, spending quality time with family
+                and friends, and traveling. I'm particularly passionate about
+                technology, coding, and solving complex problems, and I enjoy
+                building solutions that combine innovation and practicality to
+                create meaningful impacts.{" "}
               </p>{" "}
             </div>
           </div>
@@ -164,7 +151,7 @@ function aboutMe() {
           </div>
         </div>
         <footer className="tailoredFooter">
-          <p>&copy; 2024 Maan Patel. All rights reserved.</p>
+          <p>&copy; 2025 Maan Patel. All rights reserved.</p>
         </footer>
       </Provider>
     </>
