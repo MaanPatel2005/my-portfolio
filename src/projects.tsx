@@ -24,7 +24,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { HStack } from "@chakra-ui/react";
 import DynamicTyping from "./dynamicTyping";
-import { Tooltip } from "./components/ui/tooltip";
 
 function Projects() {
   const navigate = useNavigate();
