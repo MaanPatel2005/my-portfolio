@@ -13,7 +13,6 @@ import {
   MenuTrigger,
 } from "./components/ui/menu";
 import { useNavigate } from "react-router-dom";
-import { Tooltip } from "./components/ui/tooltip";
 import DynamicTyping from "./dynamicTyping";
 
 interface Experience {

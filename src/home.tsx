@@ -9,7 +9,6 @@ import {
   MenuTrigger,
 } from "./components/ui/menu";
 import { To, useNavigate } from "react-router-dom";
-import { Tooltip } from "./components/ui/tooltip";
 import ProfilePhoto from "/newpfp.png";
 import "./home.css";
 import DynamicTyping from "./dynamicTyping";
