@@ -17,7 +17,6 @@ import {
 } from "./components/ui/menu";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import DynamicTyping from "./dynamicTyping";
-import { Tooltip } from "./components/ui/tooltip";
 
 function aboutMe() {
   const navigate = useNavigate(); // Initialize useNavigate for navigation
