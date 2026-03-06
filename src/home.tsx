@@ -2,7 +2,7 @@ import InSyncDash from "/InSyncDash.png";
 // import Zot1 from "/ZotResearch1.png";
 import UnibitesScreenshot2 from "/unibites2.png";
 import MakapoScreenshot from "/makapo.png";
-import TaskAllocationScreenshot from "/Poster.jpg";
+import AgentNative from "/gallery.jpg";
 import "./home.css";
 import Navbar from "./components/Navbar";
 import TiltCard from "./components/TiltCard";
@@ -258,7 +258,9 @@ function Home() {
                 <div className="pf-exp-head">
                   <span className="pf-exp-duration">{exp.duration}</span>
                   <div className="pf-exp-title-company">
-                    {exp.title}<span className="pf-exp-sep">·</span>{exp.company}
+                    {exp.title}
+                    <span className="pf-exp-sep">·</span>
+                    {exp.company}
                   </div>
                 </div>
                 <div className="pf-exp-line" />
@@ -277,33 +279,37 @@ function Home() {
           <div className="pf-proj-list">
             <div className="pf-proj-card">
               <div className="pf-proj-text">
-                <h3 className="pf-proj-name">AI-Assisted Task Allocation</h3>
+                <h3 className="pf-proj-name">Agent Native</h3>
                 <p>
-                  Fine-tuned CodeBERT for Agile task allocation using PyTorch
-                  and HuggingFace Transformers on 400K tasks, achieving 70% F1
-                  score alignment with project manager decisions.
+                  Engineered a Babel AST analysis engine to map React JSX to
+                  agent actions, eliminating runtime execution latency. Built
+                  stable TypeScript action IDs to prevent agent breakage during
+                  UI refactors, removing DOM scraping fragility entirely.
                 </p>
                 <p>
-                  Built Sentence Transformer and FAISS task-matching system,
-                  improving accuracy by 10% and cutting compute costs by 50%.
-                  Published peer-reviewed research at XP 2026 on scalable ML
-                  coordination patterns for distributed engineering
-                  organizations.
+                  Optimized Groq-hosted Llama 3.3 to map natural language to UI
+                  actions, reducing prompt size by 70% via XGBoost pathing.
+                  Integrated Transformers.js for on-device intent classification
+                  and streamlined multi-page task automation.
                 </p>
                 <p>
-                  Engineered end-to-end ML data pipeline with AWS RDS (MySQL)
-                  and Pandas to preprocess and version task data for distributed
-                  model training across multiple experiment runs.
+                  Developed a UI integrating OpenAI Whisper and a React-based
+                  action registry to ensure deterministic, state-synced
+                  execution across agentic workflows.
                 </p>
                 <div className="pf-tech-tags">
                   {[
-                    "Python",
-                    "PyTorch",
-                    "HuggingFace",
-                    "CodeBERT",
-                    "FAISS",
-                    "AWS RDS",
+                    "React",
+                    "Express.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "Llama 3.3",
+                    "Groq",
+                    "XGBoost",
+                    "Transformers.js",
+                    "OpenAI Whisper",
                     "MySQL",
+                    "REST API",
                   ].map((t) => (
                     <span key={t} className="pf-tech-tag">
                       {t}
@@ -314,10 +320,7 @@ function Home() {
               <div className="pf-proj-image">
                 <TiltCard>
                   <div className="pf-proj-img-wrap">
-                    <img
-                      src={TaskAllocationScreenshot}
-                      alt="AI Task Allocation"
-                    />
+                    <img src={AgentNative} alt="Agent Native" />
                   </div>
                 </TiltCard>
               </div>
@@ -325,26 +328,31 @@ function Home() {
 
             <div className="pf-proj-card pf-proj-card--reverse">
               <div className="pf-proj-text">
-                <h3 className="pf-proj-name">Makapo Aquatics Project</h3>
+                <h3 className="pf-proj-name">Makapo Aquatics (Capstone)</h3>
                 <p>
-                  Developed a HIPAA-compliant web platform for Makapo,
-                  streamlining athlete training documentation and secure data
-                  storage using AWS RDS, STS, and encrypted MySQL, reducing
-                  manual logging time by 60% and enabling 65% user scalability.
+                  Led development of a full-stack web application enabling
+                  real-time AI-assisted note capture for Paralympic rowing
+                  coaches. Built frontend in React and TypeScript and backend
+                  with Python, FastAPI, and AWS Lambda for note capture and data
+                  recall.
                 </p>
                 <p>
-                  Integrated AI-powered tools to convert speech into structured
-                  training notes via media tokenization and natural language
-                  processing, boosting documentation accuracy by 45%.
+                  Architected an audio processing pipeline with Python, Librosa,
+                  and NumPy to transcribe voice recordings into training logs.
+                  Applied a Deepseek wrapper to generate athlete-specific
+                  insights from recordings, reducing manual documentation time
+                  by 60%.
                 </p>
                 <div className="pf-tech-tags">
                   {[
-                    "AWS RDS",
-                    "MySQL",
-                    "Google Cloud",
-                    "Tailwind",
+                    "React",
+                    "TypeScript",
+                    "Python",
+                    "FastAPI",
+                    "AWS Lambda",
                     "Firebase",
-                    "Docker",
+                    "Librosa",
+                    "Deepseek",
                   ].map((t) => (
                     <span key={t} className="pf-tech-tag">
                       {t}
@@ -363,26 +371,38 @@ function Home() {
 
             <div className="pf-proj-card">
               <div className="pf-proj-text">
-                <h3 className="pf-proj-name">Unibites</h3>
+                <h3 className="pf-proj-name">
+                  UniBites (3rd Place — Product Fellowship)
+                </h3>
                 <p>
-                  Designed and launched Unibites, a scalable food access
-                  platform used by 1,000+ daily users across a 30,000-student
-                  campus, reducing food waste by 25% through real-time event
-                  aggregation and intuitive meal discovery.
+                  Built a full-stack platform using React, Tailwind, and
+                  Supabase for optimizing university dining hall feedback loops.
+                  Utilized FastAPI and SQL to store and retrieve historical
+                  data, and BeautifulSoup to webscrape daily meals.
                 </p>
                 <p>
-                  Led product design and user validation by conducting 22 user
-                  interviews, wireframing in Figma, and iterating on prototypes
-                  to align the platform with student needs.
+                  Implemented secure authentication with JWT and Firebase,
+                  supporting 30,000+ users. Engineered a data analytics pipeline
+                  with Python, Pandas, and Plotly to transform raw feedback into
+                  actionable insights for dining hall optimization.
                 </p>
                 <div className="pf-tech-tags">
-                  {["Figma", "React.js", "Node.js", "Supabase", "Agile"].map(
-                    (t) => (
-                      <span key={t} className="pf-tech-tag">
-                        {t}
-                      </span>
-                    ),
-                  )}
+                  {[
+                    "React",
+                    "Node.js",
+                    "Firebase",
+                    "Supabase",
+                    "SQL",
+                    "FastAPI",
+                    "Python",
+                    "Pandas",
+                    "BeautifulSoup",
+                    "JWT",
+                  ].map((t) => (
+                    <span key={t} className="pf-tech-tag">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
               <div className="pf-proj-image">
