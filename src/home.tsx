@@ -1,5 +1,5 @@
 import InSyncDash from "/InSyncDash.png";
-import Zot1 from "/ZotResearch1.png";
+// import Zot1 from "/ZotResearch1.png";
 import UnibitesScreenshot2 from "/unibites2.png";
 import MakapoScreenshot from "/makapo.png";
 import TaskAllocationScreenshot from "/Poster.jpg";
