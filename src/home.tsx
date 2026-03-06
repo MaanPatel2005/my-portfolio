@@ -135,7 +135,7 @@ function Home() {
             </h1>
           </div>
           <div className="pf-hero-rule-row">
-            <span className="pf-hero-location">Based in Irvine, CA</span>
+            <span className="pf-hero-location">Based in Los Angeles, CA</span>
           </div>
         </section>
 
@@ -153,7 +153,7 @@ function Home() {
         <div className="pf-stats">
           <div className="pf-stats-inner">
             <div className="pf-stat">
-              <span className="pf-stat-num">3.78</span>
+              <span className="pf-stat-num">3.80</span>
               <span className="pf-stat-label">GPA at UCI</span>
             </div>
             <div className="pf-stat-div" />
@@ -163,7 +163,7 @@ function Home() {
             </div>
             <div className="pf-stat-div" />
             <div className="pf-stat">
-              <span className="pf-stat-num">6+</span>
+              <span className="pf-stat-num">10+</span>
               <span className="pf-stat-label">Projects Shipped</span>
             </div>
             <div className="pf-stat-div" />
