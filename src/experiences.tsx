@@ -2,18 +2,7 @@ import React from "react";
 import "./home.css";
 import "./experiences.css";
 import { Provider } from "./components/ui/provider";
-import { Button } from "./components/ui/button";
-
-import {
-  MenuContent,
-  MenuItem,
-  MenuItemCommand,
-  MenuRoot,
-  MenuSeparator,
-  MenuTrigger,
-} from "./components/ui/menu";
-import { useNavigate } from "react-router-dom";
-import DynamicTyping from "./dynamicTyping";
+import Navbar from "./components/Navbar";
 
 interface Experience {
   title: string;
@@ -93,94 +82,58 @@ const experiences: Experience[] = [
 ];
 
 const Experiences: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (path: string) => {
-    navigate(path);
-  };
-
   return (
     <>
       <Provider>
-        <div className="header">
-          <div className="menu-container">
-            <MenuRoot>
-              <MenuTrigger asChild>
-                <Button variant="outline" size="sm">
-                  Menu
-                </Button>
-              </MenuTrigger>
-              <MenuContent>
-                <MenuItem
-                  value="home"
-                  onClick={() => handleNavigation("/Home")}
-                >
-                  Home <MenuItemCommand>⌘H</MenuItemCommand>
-                </MenuItem>
-                <MenuSeparator />
-                <MenuItem
-                  value="about-me"
-                  onClick={() => handleNavigation("/AboutMe")}
-                >
-                  About Me <MenuItemCommand>⌘A</MenuItemCommand>
-                </MenuItem>
-                <MenuItem
-                  value="projects"
-                  onClick={() => handleNavigation("/Projects")}
-                >
-                  Projects <MenuItemCommand>⌘⇧R</MenuItemCommand>
-                </MenuItem>
-                <MenuItem
-                  value="experiences"
-                  onClick={() => handleNavigation("/Experiences")}
-                >
-                  Experiences <MenuItemCommand>⌘E</MenuItemCommand>
-                </MenuItem>
-              </MenuContent>
-            </MenuRoot>
-          </div>
+        <Navbar />
+        <div style={{ paddingTop: "var(--nav-height, 60px)" }}>
+          <div className="experiences-container">
+            <h1 className="experiences-title">Professional Experience</h1>
 
-          <div className="typewriter-wrapper">
-            <DynamicTyping />
-          </div>
-        </div>
-
-        <div className="experiences-container">
-          <h1 className="experiences-title">Professional Experience</h1>
-
-          <div className="experiences-timeline">
-            {experiences.map((exp, index) => (
-              <div key={index} className="experience-card">
-                <div className="experience-header">
-                  <div className="title-line">
-                    <h2>{exp.title}</h2>
-                    <span className="location">{exp.location}</span>
+            <div className="experiences-timeline">
+              {experiences.map((exp, index) => (
+                <div key={index} className="experience-card">
+                  <div className="experience-header">
+                    <div className="title-line">
+                      <h2>{exp.title}</h2>
+                      <span className="location">{exp.location}</span>
+                    </div>
+                    <div className="company-line">
+                      <h3>{exp.company}</h3>
+                      <span className="duration">{exp.duration}</span>
+                    </div>
                   </div>
-                  <div className="company-line">
-                    <h3>{exp.company}</h3>
-                    <span className="duration">{exp.duration}</span>
+
+                  <ul className="experience-description">
+                    {exp.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </ul>
+
+                  <div className="technologies">
+                    {exp.technologies.map((tech, i) => (
+                      <span key={i} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-
-                <ul className="experience-description">
-                  {exp.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
-
-                <div className="technologies">
-                  {exp.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-        <footer>
-          <p>&copy; 2025 Maan Patel. All rights reserved.</p>
+        {/* end paddingTop wrapper */}
+        <footer className="hp-footer">
+          <span className="hp-footer-brand">Maan Patel</span>
+          <span>&copy; 2025 All rights reserved.</span>
+          <a
+            href="https://github.com/maanpatel2005"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hp-footer-link"
+          >
+            GitHub ↗
+          </a>
         </footer>
       </Provider>
     </>

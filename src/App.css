@@ -1,19 +1,10 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* App.css — minimal, defer to home.css design tokens */
+body {
+  font-family: var(--font-sans, "Plus Jakarta Sans", system-ui, sans-serif);
+  background-color: var(--color-bg, #f7f7f5);
+  color: var(--color-text, #0e0e0e);
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff9f6; /* Light cream background */
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
 
 
 
@@ -164,13 +155,3 @@ body {
   color: #333;
 }
 
-footer {
-  background-color: #a7c7e7; /* Baby blue background color */
-  color: #333; /* Dark text for contrast */
-  padding: 1rem 0; /* Padding for top and bottom of the footer */
-  text-align: center; /* Center the text */
-  width: 100%; /* Ensure it spans the entire width */
-  position: fixed; /* Fixed positioning to stay at the bottom */
-  bottom: 0; /* Stick it to the bottom of the viewport */
-  left: 0; /* Align it to the left of the page */
-}
