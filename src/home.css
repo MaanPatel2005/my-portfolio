@@ -3,7 +3,7 @@
    ============================================================ */
 :root {
   --color-bg:      #ffffff;
-  --color-surface: #fafafa;
+  --color-surface: #f5f5f3;
   --color-text:    #111111;
   --color-muted:   rgba(17, 17, 17, 0.42);
   --color-border:  rgba(0, 0, 0, 0.1);
@@ -62,8 +62,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* Small uppercase section label */
 .pf-label {
   display: block;
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-muted);
@@ -295,15 +295,15 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .pf-about-photos {
-  flex: 0 0 300px;
+  flex: 0 0 260px;
 }
 
 .pf-about-img {
   width: 100%;
-  height: 400px;
+  height: 360px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: transform 0.25s, opacity 0.25s;
 }
 .pf-about-img:hover { transform: scale(1.02); opacity: 0.88; }
@@ -311,47 +311,90 @@ img { max-width: 100%; height: auto; display: block; }
 /* ============================================================
    EXPERIENCE
    ============================================================ */
-.pf-experience { background: var(--color-surface); }
+.pf-experience { background: var(--color-bg); }
 
-.pf-exp-list { display: flex; flex-direction: column; gap: 0; max-width: var(--max-w); margin-left: auto; margin-right: auto; width: 100%; }
-
-.pf-exp-card {
-  background: transparent;
-  border-bottom: 1px solid var(--color-border);
-  padding: 1.75rem 0;
-  transition: background 0.15s;
-}
-.pf-exp-card:first-child { border-top: 1px solid var(--color-border); }
-.pf-exp-card:hover { background: rgba(0, 0, 0, 0.018); }
-
-.pf-exp-header { margin-bottom: 1rem; }
-
-.pf-exp-title-row,
-.pf-exp-company-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.pf-exp-title-row { margin-bottom: 0.3rem; }
-
-.pf-exp-title    { font-size: 1rem; font-weight: 600; color: var(--color-text); }
-.pf-exp-company  { font-size: 0.9rem; font-weight: 600; color: var(--color-text); }
-.pf-exp-location,
-.pf-exp-duration { font-size: 0.8rem; color: var(--color-muted); }
-
-.pf-exp-desc {
-  list-style: disc;
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
+.pf-exp-list {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  line-height: 1.65;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* 2-column grid: [timeline] [content]
+   row 1: dot  | date + title
+   row 2: line | bullets          */
+.pf-exp-card {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.75rem;
+}
+.pf-exp-card:first-child { padding-top: 2rem; }
+
+.pf-exp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.22);
+  justify-self: center;
+  margin-top: 0.28rem;
+}
+
+.pf-exp-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-bottom: 0.6rem;
+}
+
+.pf-exp-line {
+  justify-self: center;
+  width: 1px;
+  background: var(--color-border);
+}
+.pf-exp-card:last-child .pf-exp-line { background: transparent; }
+
+.pf-exp-duration {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.pf-exp-title-company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.pf-exp-sep {
+  font-weight: 400;
+  color: var(--color-muted);
+  margin: 0 0.4rem;
+}
+
+.pf-exp-desc {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
   color: var(--color-muted);
 }
+.pf-exp-card:last-child .pf-exp-desc { padding-bottom: 2rem; }
+.pf-exp-desc li { display: flex; gap: 0.5rem; }
+.pf-exp-desc li::before { content: '–'; opacity: 0.45; flex-shrink: 0; }
 
 /* ============================================================
    TECH TAGS
@@ -498,8 +541,7 @@ img { max-width: 100%; height: auto; display: block; }
   .pf-proj-card--reverse { flex-direction: column; gap: 1.5rem; }
   .pf-proj-image { flex: none; width: 100%; }
 
-  .pf-exp-title-row,
-  .pf-exp-company-row { flex-direction: column; gap: 0.1rem; }
+  .pf-exp-card { column-gap: 1rem; }
 
   .pf-footer { flex-wrap: wrap; gap: 0.5rem; }
 }

@@ -254,28 +254,19 @@ function Home() {
           <div className="pf-exp-list">
             {experiences.map((exp, idx) => (
               <div key={idx} className="pf-exp-card">
-                <div className="pf-exp-header">
-                  <div className="pf-exp-title-row">
-                    <span className="pf-exp-title">{exp.title}</span>
-                    <span className="pf-exp-location">{exp.location}</span>
-                  </div>
-                  <div className="pf-exp-company-row">
-                    <span className="pf-exp-company">{exp.company}</span>
-                    <span className="pf-exp-duration">{exp.duration}</span>
+                <div className="pf-exp-dot" />
+                <div className="pf-exp-head">
+                  <span className="pf-exp-duration">{exp.duration}</span>
+                  <div className="pf-exp-title-company">
+                    {exp.title}<span className="pf-exp-sep">·</span>{exp.company}
                   </div>
                 </div>
+                <div className="pf-exp-line" />
                 <ul className="pf-exp-desc">
                   {exp.description.map((d, i) => (
                     <li key={i}>{d}</li>
                   ))}
                 </ul>
-                <div className="pf-tech-tags">
-                  {exp.technologies.map((t, i) => (
-                    <span key={i} className="pf-tech-tag">
-                      {t}
-                    </span>
-                  ))}
-                </div>
               </div>
             ))}
           </div>
