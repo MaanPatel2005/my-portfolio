@@ -168,8 +168,8 @@ function Home() {
             </div>
             <div className="pf-stat-div" />
             <div className="pf-stat">
-              <span className="pf-stat-num">2M+</span>
-              <span className="pf-stat-label">lbs Food Donated</span>
+              <span className="pf-stat-num">2x</span>
+              <span className="pf-stat-label">Hackathon Winner</span>
             </div>
           </div>
         </div>
