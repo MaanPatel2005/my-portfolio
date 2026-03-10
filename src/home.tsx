@@ -8,7 +8,7 @@ import Beach1 from "/beach1.jpeg";
 import Beach2 from "/beach2.jpeg";
 import Soho from "/soho.jpg";
 import Florida from "/florida.jpeg";
-import FloridaShirt from "/florida_shirt.jpg";
+// import FloridaShirt from "/florida_shirt.jpg";
 import BlackShirt from "/blackshirt.jpg";
 import OldPFP from "/pfp.png";
 import "./home.css";
