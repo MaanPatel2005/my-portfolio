@@ -1,18 +1,18 @@
-/* ── Minimal flat navbar ── */
+/* ── Zara-inspired minimal navbar ── */
 .pf-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 58px;
+  height: 56px;
   padding: 0 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   z-index: 1000;
 }
 
@@ -21,18 +21,19 @@
   border: none;
   font-size: 0.73rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
-  color: #111111;
+  letter-spacing: 0.12em;
+  color: #1a1a1a;
   cursor: pointer;
   user-select: none;
   font-family: inherit;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .pf-nav-links {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 2.75rem;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -42,15 +43,16 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.73rem;
+  font-size: 0.68rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
-  color: #111111;
+  letter-spacing: 0.14em;
+  color: #1a1a1a;
   font-family: inherit;
   padding: 0;
   text-decoration: none;
   display: inline;
+  text-transform: uppercase;
   transition: opacity 0.2s;
 }
 
-.pf-nav-link:hover { opacity: 0.42; }
+.pf-nav-link:hover { opacity: 0.38; }

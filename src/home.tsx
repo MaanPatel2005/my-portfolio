@@ -1,12 +1,59 @@
+import { useState, useRef } from "react";
 import InSyncDash from "/InSyncDash.png";
 // import Zot1 from "/ZotResearch1.png";
 import UnibitesScreenshot2 from "/unibites2.png";
 import MakapoScreenshot from "/makapo.png";
 import AgentNative from "/gallery.jpg";
+import Beach1 from "/beach1.jpeg";
+import Beach2 from "/beach2.jpeg";
+import Soho from "/soho.jpg";
+import Florida from "/florida.jpeg";
+// import FloridaShirt from "/florida_shirt.jpg";
+import BlackShirt from "/blackshirt.jpg";
+import OldPFP from "/pfp.png";
 import "./home.css";
 import Navbar from "./components/Navbar";
 import TiltCard from "./components/TiltCard";
 import { Provider } from "./components/ui/provider";
+
+interface HoverRevealImageProps {
+  defaultSrc: string;
+  hoverSrc?: string;
+  delayedSrc: string;
+  className?: string;
+  alt?: string;
+}
+
+function HoverRevealImage({
+  defaultSrc,
+  hoverSrc,
+  delayedSrc,
+  className,
+  alt,
+}: HoverRevealImageProps) {
+  const [src, setSrc] = useState(defaultSrc);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = () => {
+    if (hoverSrc) setSrc(hoverSrc);
+    timerRef.current = setTimeout(() => setSrc(delayedSrc), 1000);
+  };
+
+  const handleMouseLeave = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setSrc(defaultSrc);
+  };
+
+  return (
+    <img
+      src={src}
+      className={className}
+      alt={alt}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    />
+  );
+}
 
 const GREETINGS = [
   "Привет",
@@ -125,16 +172,24 @@ function Home() {
         <Navbar />
 
         <section id="hero" className="pf-hero">
+          {/*
+           * ── INSERT HERO BACKGROUND IMAGE ─────────────────────────────
+           * Replace this <div> with:
+           *   <img src="/hero-bg.jpg" className="pf-hero-bg-img" alt="" />
+           * Recommended: full-bleed landscape or portrait, min 1920 × 1080 px
+           * ──────────────────────────────────────────────────────────────
+           */}
+          <img src={Beach1} className="pf-hero-bg-img" alt="" />
+          <div className="pf-hero-overlay" />
           <div className="pf-hero-headline">
             <h1 className="pf-hero-title">
-              CRAFTING
+              MAAN
               <br />
-              AI-DRIVEN
-              <br />
-              EXPERIENCES.
+              PATEL
             </h1>
           </div>
           <div className="pf-hero-rule-row">
+            <span className="pf-hero-scroll-hint">↓ Scroll</span>
             <span className="pf-hero-location">Based in Los Angeles, CA</span>
           </div>
         </section>
@@ -174,10 +229,57 @@ function Home() {
           </div>
         </div>
 
+        {/*
+         * ── EDITORIAL IMAGE GRID ──────────────────────────────────────
+         * Zara-style 3-column portrait grid. To use real images, replace
+         * each <div className="pf-img-placeholder ..."> with:
+         *   <img src="/your-image.jpg" className="pf-editorial-img" alt="..." />
+         * Recommended per slot: portrait 2:3 ratio, min 800 × 1200 px
+         * ──────────────────────────────────────────────────────────────
+         */}
+        <section className="pf-editorial-grid">
+          <div className="pf-editorial-item">
+            <HoverRevealImage
+              defaultSrc={Florida}
+              delayedSrc={BlackShirt}
+              className="pf-editorial-img"
+              alt="Beach"
+            />
+            <div className="pf-editorial-caption">
+              <span className="pf-editorial-label">Florida Keys</span>
+              <span className="pf-editorial-sublabel">September 2024</span>
+            </div>
+          </div>
+          <div className="pf-editorial-item">
+            <HoverRevealImage
+              defaultSrc={Beach2}
+              delayedSrc={Soho}
+              className="pf-editorial-img"
+              alt="Beach"
+            />
+            <div className="pf-editorial-caption">
+              <span className="pf-editorial-label">La Jolla Shores</span>
+              <span className="pf-editorial-sublabel">March 2026</span>
+            </div>
+          </div>
+          <div className="pf-editorial-item">
+            <HoverRevealImage
+              defaultSrc={OldPFP}
+              delayedSrc="/florida_shirt.jpg"
+              className="pf-editorial-img"
+              alt="Florida Shirt"
+            />
+            <div className="pf-editorial-caption">
+              <span className="pf-editorial-label">Venice Beach</span>
+              <span className="pf-editorial-sublabel">June 2024</span>
+            </div>
+          </div>
+        </section>
+
         <section id="about" className="pf-section pf-about">
           <span className="pf-label">ABOUT ME</span>
           <p className="pf-about-statement">
-            I build AI-powered products end-to-end &mdash; from models and
+            I engineer AI-powered products end-to-end &mdash; from models and
             pipelines to interfaces that make data useful.
           </p>
           <p className="pf-about-body">
@@ -193,32 +295,39 @@ function Home() {
                 <span className="pf-principle-name">Impact</span>
               </div>
               <p>
-                Building things that make a measurable difference in the real
-                world.
+                I love building things that directly imrpove the communities I
+                serve.
               </p>
             </div>
             <div className="pf-principle">
               <div className="pf-principle-header">
                 <span className="pf-principle-num">02</span>
                 <span className="pf-principle-sep">&mdash;</span>
-                <span className="pf-principle-name">Clarity</span>
+                <span className="pf-principle-name">Efficiency</span>
               </div>
-              <p>Complex problems deserve elegant, understandable solutions.</p>
+              <p>
+                I care about making systems faster and smarter, giving automated
+                solutions a competitive edge.
+              </p>
             </div>
             <div className="pf-principle">
               <div className="pf-principle-header">
                 <span className="pf-principle-num">03</span>
                 <span className="pf-principle-sep">&mdash;</span>
-                <span className="pf-principle-name">Craft</span>
+                <span className="pf-principle-name">Ownership</span>
               </div>
-              <p>Attention to detail at every layer of the stack.</p>
+              <p>
+                I love building things from the ground up and making the
+                architectural decisions that shape a product's trajectory.
+              </p>
             </div>
           </div>
           <div className="pf-about-inner" style={{ marginTop: "3.5rem" }}>
             <div className="pf-about-text">
               <p>
-                Final-year Computer Science student at UC Irvine, graduating
-                June 2026. I focus on machine learning, NLP, and full-stack
+                UC Irvine (B.S.) --&gt; UC San Diego (M.S.). First year Masters
+                student at UC San Diego studying Computer Science. I am
+                passionate about machine learning, NLP, and full-stack
                 engineering&mdash;building systems that turn complex data into
                 real decisions.
               </p>
@@ -230,17 +339,16 @@ function Home() {
                 engineering orgs.
               </p>
               <p>
-                Previously: SWE Intern at Ernst &amp; Young (XGBoost classifier
-                automating 10K+ weekly access requests; NLP pipeline cutting RFP
-                turnaround by 75%; PySpark compliance pipeline across 3PB+ of
-                data), SWE Intern at Infosys (YOLOv5 + PyTorch robotics
-                navigation system, 80% recall at &lt;100ms), and Full Stack
-                Developer at Commit the Change (AWS microservices handling 2M+
-                annual transactions).
-              </p>
-              <p>
-                Outside of work: basketball, film, travel, and an avid
-                tiramis&ugrave; connoisseur.
+                Outside of work, I'm someone who cares a lot about how things
+                look and feel&mdash;whether that's a product interface or an
+                outfit. Fashion is a genuine passion; the editorial aesthetic of
+                this site isn't accidental. I spend a lot of time on the golf
+                course and the volleyball court, and I think both sports have
+                taught me more about patience and reading a situation than
+                almost anything else. Add in film, travel, and a possibly
+                unhealthy dedication to finding the best tiramis&ugrave; in
+                every city I visit, and that's a pretty honest picture of me
+                when the laptop is closed.
               </p>
             </div>
             <div className="pf-about-photos">
@@ -273,6 +381,18 @@ function Home() {
             ))}
           </div>
         </section>
+
+        {/*
+         * ── FULL-WIDTH EDITORIAL BANNER ──────────────────────────────────
+         * Wide image that sits between Experience and Projects (Zara-style).
+         * Replace the <div> below with:
+         *   <img src="/banner.jpg" className="pf-banner-img" alt="..." />
+         * Recommended: wide landscape, min 1920 × 900 px
+         * ─────────────────────────────────────────────────────────────────
+         */}
+        <div className="pf-editorial-banner">
+          <img src={Beach2} className="pf-banner-img" alt="Beach 2" />
+        </div>
 
         <section id="projects" className="pf-section pf-projects">
           <span className="pf-label">PROJECTS</span>
