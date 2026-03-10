@@ -8,9 +8,9 @@ import Beach1 from "/beach1.jpeg";
 import Beach2 from "/beach2.jpeg";
 import Soho from "/soho.jpg";
 import Florida from "/florida.jpeg";
-// import FloridaShirt from "/florida_shirt.jpg";
 import BlackShirt from "/blackshirt.jpg";
 import OldPFP from "/pfp.png";
+import Banner from "/banner.png";
 import "./home.css";
 import Navbar from "./components/Navbar";
 import TiltCard from "./components/TiltCard";
@@ -72,6 +72,9 @@ const GREETINGS = [
   "Hey, I'm Maan!",
 ];
 const MARQUEE_ITEMS = [...GREETINGS, ...GREETINGS];
+
+const BANNER_IMAGES = [Banner];
+const BANNER_TRACK = [...BANNER_IMAGES, ...BANNER_IMAGES];
 
 interface Experience {
   title: string;
@@ -391,7 +394,16 @@ function Home() {
          * ─────────────────────────────────────────────────────────────────
          */}
         <div className="pf-editorial-banner">
-          <img src={Beach2} className="pf-banner-img" alt="Beach 2" />
+          <div className="pf-banner-carousel-track">
+            {BANNER_TRACK.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                className="pf-banner-carousel-img"
+                alt=""
+              />
+            ))}
+          </div>
         </div>
 
         <section id="projects" className="pf-section pf-projects">
