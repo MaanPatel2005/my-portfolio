@@ -36,7 +36,7 @@ function HoverRevealImage({
 
   const handleMouseEnter = () => {
     if (hoverSrc) setSrc(hoverSrc);
-    timerRef.current = setTimeout(() => setSrc(delayedSrc), 1000);
+    timerRef.current = setTimeout(() => setSrc(delayedSrc), 500);
   };
 
   const handleMouseLeave = () => {
