@@ -146,7 +146,7 @@ const experiences: Experience[] = [
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "Software Engineering Intern",
     company: "Commit the Change",
     duration: "Oct 2023 – Jun 2024",
     location: "Irvine, CA",
